@@ -1,57 +1,63 @@
-# Student-BST-System
-**Y1S3 Data Structure Assignment 2**
+# 🌳 Student-BST-System
 
-A C++ program that manages student records using a Binary Search Tree (BST). This application allows users to read student data from a file, perform various tree traversals, clone subtrees, and export data in specific orders.
+![C++](https://img.shields.io/badge/Language-C++-00599C?style=flat-square&logo=c%2B%2B)
+![Status](https://img.shields.io/badge/Status-Completed-success?style=flat-square)
+![Course](https://img.shields.io/badge/Course-Data_Structures-blue?style=flat-square)
 
+**Year 1 Semester 3 Data Structure Assignment 2** A C++ application designed to manage student records efficiently using a **Binary Search Tree (BST)**. This system allows users to load student data, execute various complex tree traversals, clone specific subtrees, and export organized data.
 
-📋 **Features**
-Read Data: Loads student records from student.txt. It automatically handles parsing of multi-line records and prevents inserting duplicate Student IDs.
+---
 
-Deepest Nodes: Identifies and prints the Student IDs of nodes located at the deepest level of the BST.
+## ✨ Features
 
-Display / Export:
+* **📥 Read Data:** Automatically loads and parses multi-line student records from `student.txt`. Prevents the insertion of duplicate Student IDs.
+* **🎯 Deepest Nodes:** Identifies and outputs the Student IDs of the nodes located at the absolute deepest level of the BST.
+* **🗂️ Display / Export Data:**
+  * Sorts records in **Ascending** (In-order traversal) and **Descending** (Reverse In-order traversal) order based on Student ID.
+  * Outputs data directly to the console or saves it externally to `student-info.txt`.
+* **🧬 Clone Subtree:** Generates a complete deep copy of a subtree starting from any user-specified Student ID.
+* **📶 Print Level Nodes:** Utilizes a Breadth-First Search (BFS) algorithm to print Student IDs level by level.
+* **🛤️ Print Paths:** Displays all external pathways from the root node down to every individual leaf node.
 
-Supports Ascending (In-order) and Descending (Reverse In-order) sorting based on Student ID.
+---
 
-Output can be directed to the Console or saved to a file named student-info.txt.
+## 📂 Project Structure
 
-Clone Subtree: Creates a deep copy of a subtree starting from a specific Student ID provided by the user.
+The repository is modularized into application logic, data structures, and data files.
 
-Print Level Nodes: Performs a Breadth-First Search (BFS) to print Student IDs level by level.
+### ⚙️ Application Logic
+* `app.cpp`: The main entry point. Handles the interactive menu loop, file reading logic (`readFile`), and user input processing.
 
-Print Paths: Displays all external paths from the root to every leaf node.
+### 🏗️ Data Structures
+* `BST.cpp` / `BST.h`: The core Binary Search Tree implementation. Contains methods for insertion, deletion, and specialized assignment features (deepest nodes, cloning, path printing).
+* `Student.cpp` / `Student.h`: Defines the `Student` structure (ID, Name, Address, DOB, etc.) and handles object comparison logic.
+* `BTNode.cpp` / `BTNode.h`: Represents a single node within the Binary Search Tree.
+* `Queue.cpp` / `Queue.h`: A custom Linked-List based Queue implementation used strictly for level-order traversals (BFS).
+* `Node.cpp` / `Node.h`: Represents a node specifically within the Queue structure.
 
+### 📄 Data Files
+* `student.txt`: The raw input file containing the initial student records.
+* `student-info.txt`: The formatted output file generated upon selecting the "Write into file" export option.
 
-📂 **Project Structure**
+---
 
-This project consists of the following C++ source files and headers:
+## 🚀 Getting Started
 
-Application Logic
+1. **Clone the repository:**
+   ```bash
+   git clone [https://github.com/Darren7218/Student-BST-System.git](https://github.com/Darren7218/Student-BST-System.git)
 
-app.cpp: The main entry point. Handles the menu loop, file reading logic (readFile), and user input processing.
+2. **Compile the program:**
+   ```bash
+   g++ *.cpp -o bst_system
 
-Data Structures
+3. **Run the executable:**
+   ```bash
+   ./bst_system
 
-BST.cpp / BST.h: implementation of the Binary Search Tree. Includes methods for insertion, deletion, and the specific assignment features (deepest nodes, cloning, printing paths).
+## Group Members
+Universiti Tunku Abdul Rahman (UTAR) - Computer Science
 
-Student.cpp / Student.h: Defines the Student structure (ID, Name, Address, DOB, etc.) and comparison logic.
+* Heled Kong Sheng En
 
-BTNode.cpp / BTNode.h: Represent a node within the Binary Search Tree.
-
-Queue.cpp / Queue.h: A Linked-List based Queue implementation used for level-order traversals (BFS).
-
-Node.cpp / Node.h: Represents a node within the Queue.
-
-Data Files
-
-student.txt: The input file containing raw student records.
-
-student-info.txt: The output file generated when the user selects the "Write into file" option.
-
-
-👥 Group Members
-
-Heled Kong Sheng En 
-
-Ooh Rui Hang 
-
+* Ooh Rui Hang
